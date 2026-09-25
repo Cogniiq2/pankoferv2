@@ -17,3 +17,6 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+// Exposes Cloudflare bindings to `next dev` (no effect on production builds).
+import("@opennextjs/cloudflare").then((m) => m.initOpenNextCloudflareForDev());

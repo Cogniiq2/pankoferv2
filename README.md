@@ -35,3 +35,34 @@ pnpm build      # Produktions-Build (statisch)
 ```
 
 Die Seite ist per `robots: noindex` und `X-Robots-Tag` von Suchmaschinen ausgeschlossen.
+
+## Deployment (Cloudflare Workers via OpenNext)
+
+Worker-Name: **`pankoferv2`**. Er ist in `wrangler.jsonc` festgelegt und muss
+dort mit dem Self-Reference-Service-Binding `WORKER_SELF_REFERENCE`
+übereinstimmen. `package.json` trägt denselben Namen.
+
+| Datei | Zweck |
+| --- | --- |
+| `wrangler.jsonc` | Worker-Name, Einstiegspunkt, Assets, Bindings, Observability |
+| `open-next.config.ts` | OpenNext-Adapter; Cache aus Workers Static Assets (keine R2/KV-Ressourcen nötig) |
+| `public/_headers` | Caching für `/_next/static/*` und `X-Robots-Tag` für alle Assets |
+
+Weil `wrangler.jsonc` und `open-next.config.ts` im Repository liegen, führt
+Cloudflare keine automatische `opennextjs-cloudflare migrate` mehr aus.
+
+Einstellungen in Cloudflare Workers Builds:
+
+- Build command: `pnpm run cf:build`
+- Deploy command: `pnpm exec opennextjs-cloudflare deploy`
+
+Der Deploy-Befehl von OpenNext kopiert die vorgerenderten Seiten in die
+Static Assets und ruft danach `wrangler deploy` auf. Ein direktes
+`wrangler deploy` würde diesen Schritt überspringen.
+
+```bash
+pnpm run cf:build                                 # OpenNext-Build nach .open-next/
+pnpm run preview                                  # lokal im Workers-Runtime testen
+pnpm exec opennextjs-cloudflare deploy --dry-run  # Konfiguration prüfen, ohne zu deployen
+pnpm run deploy                                   # Build + Deploy (nicht "pnpm deploy")
+```

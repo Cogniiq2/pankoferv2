@@ -1,0 +1,32 @@
+/**
+ * Cloudflare Workers configuration for the Pankofer proposal.
+ *
+ * Kept in the repository on purpose: when this file and open-next.config.ts
+ * exist, `opennextjs-cloudflare migrate` exits without regenerating anything,
+ * so Cloudflare cannot derive a different Worker name from package.json.
+ *
+ * The Worker name below is the single source of truth. The self-reference
+ * service binding must always point at the same name.
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pankoferv2",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-09-20",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      // Self-reference used by OpenNext for internal revalidation requests.
+      // Must match "name" above. See https://opennext.js.org/cloudflare/caching
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "pankoferv2"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

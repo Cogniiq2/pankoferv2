@@ -1,5 +1,5 @@
 {
-  "name": "pankofer-proposal",
+  "name": "pankoferv2",
   "version": "1.0.0",
   "private": true,
   "description": "Persönlicher Digitalisierungsvorschlag für Pankofer Sicherheitstechnik GmbH von Cogniiq",
@@ -10,9 +10,15 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "node --test lib/*.test.ts",
-    "check": "pnpm typecheck && pnpm lint && pnpm test"
+    "check": "pnpm typecheck && pnpm lint && pnpm test",
+    "cf:build": "opennextjs-cloudflare build",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.6",
     "motion": "^13.4.4",
     "next": "^16.3.6",
     "react": "^19.3.0",
@@ -26,7 +32,18 @@
     "eslint": "^9",
     "eslint-config-next": "^16.3.6",
     "tailwindcss": "^4.3.3",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.141.0"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "unrs-resolver",
+      "workerd"
+    ]
+  }
 }
