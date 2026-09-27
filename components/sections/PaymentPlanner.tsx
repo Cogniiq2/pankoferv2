@@ -98,23 +98,25 @@ export function PaymentPlanner() {
         <SectionHeading
           index="08"
           eyebrow="Individueller Zahlungsplan"
-          title={<span id="planner-title">Die Investition soll zu Ihrer Liquidität passen.</span>}
+          title={<span id="planner-title">Die Zahlungsweise soll zu Ihrer Planung passen.</span>}
           lead={
             <>
               Da Sie mir offen mitgeteilt haben, dass derzeit vor allem die Finanzierung
-              die Umsetzung erschwert, möchte ich Ihnen hier bewusst entgegenkommen. Sie
-              legen selbst fest, wie die Implementierung bezahlt wird: eine Anzahlung
-              zwischen 30 und 100 Prozent, den Rest in bis zu zwölf Monatsraten. Ohne
-              Zinsen, ohne zusätzliche Kosten.
+              des Gesamtprojekts die Umsetzung erschwert, möchte ich Ihnen bei der
+              Zahlungsweise entgegenkommen. Sie legen selbst fest, wie die Implementierung
+              bezahlt wird: mit einer Anzahlung zwischen {PRICING.MIN_DOWN_PAYMENT} und{" "}
+              {PRICING.MAX_DOWN_PAYMENT} Prozent und dem Restbetrag in bis zu{" "}
+              {PRICING.MAX_INSTALLMENT_MONTHS} Monatsraten – ohne Zinsen und ohne
+              zusätzliche Kosten.
             </>
           }
         />
 
         <Reveal className="mt-6">
           <p className="max-w-2xl text-pretty text-ink-2">
-            Der Leistungsumfang und der Gesamtpreis bleiben unabhängig vom gewählten
-            Zahlungsmodell identisch. Es gibt keinen Rabatt und keine versteckten Kosten,
-            nur eine Zahlungsweise, die zu Ihrer Situation passt.
+            Leistungsumfang und Implementierungspreis bleiben unabhängig vom gewählten
+            Zahlungsmodell identisch. Sie entscheiden lediglich, wie sich die Investition
+            zeitlich verteilt.
           </p>
         </Reveal>
 
@@ -350,7 +352,7 @@ export function PaymentPlanner() {
                       {[
                         `${PRICING.INTEREST_RATE} % Zinsen`,
                         `${formatEuro(PRICING.FINANCING_FEES)} zusätzliche Finanzierungskosten`,
-                        `Gesamtpreis bleibt ${formatEuro(plan.totalSetup)}`,
+                        `Implementierungspreis bleibt ${formatEuro(plan.totalSetup)}`,
                       ].map((t) => (
                         <li key={t} className="flex items-center gap-3">
                           <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent">
@@ -363,8 +365,8 @@ export function PaymentPlanner() {
                   )}
                 </AnimatePresence>
                 <p className="mt-5 text-caption text-ink-4">
-                  Alle Beträge netto. Die Fälligkeit von Anzahlung und Raten stimmen wir
-                  gemeinsam ab; der laufende Betrieb beginnt mit dem Live-Betrieb.
+                  Alle Beträge netto. Die Fälligkeiten stimmen wir gemeinsam ab. Die
+                  Betriebskosten fallen ab dem Live-Betrieb an.
                 </p>
               </motion.div>
             </div>
@@ -373,9 +375,8 @@ export function PaymentPlanner() {
 
         <Reveal className="mt-12">
           <p className="max-w-3xl text-pretty text-ink-2">
-            Mir ist wichtig, dass ein sinnvoller erster Digitalisierungsschritt nicht allein
-            an der Art der Finanzierung scheitert. Sollte ein anderer Zuschnitt für Sie
-            besser passen, sprechen wir darüber.
+            Sollte eine andere Aufteilung besser zu Ihrer Planung passen, sprechen Sie mich
+            gern an.
           </p>
         </Reveal>
       </div>

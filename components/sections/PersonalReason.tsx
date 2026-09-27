@@ -17,7 +17,8 @@ export function PersonalReason() {
                 id="reason-title"
                 className="serif-display text-h3 text-balance mt-5 text-ink"
               >
-                Weil ein sinnvoller Schritt nicht an der Zahlungsweise scheitern sollte.
+                Weil ein guter erster Schritt nicht an der Zahlungsstruktur scheitern
+                sollte.
               </h2>
             </Reveal>
           </div>
@@ -25,19 +26,18 @@ export function PersonalReason() {
             <Reveal delay={0.12}>
               <div className="prose-measure space-y-6 text-pretty text-ink-2">
                 <p>
-                  Sie haben in München einen sehr positiven Eindruck bei mir hinterlassen.
-                  Und Sie sind mit der Finanzierungsfrage offen umgegangen, statt das Thema
-                  einfach ruhen zu lassen. Beides schätze ich.
+                  Ich habe unseren Termin in München in sehr guter Erinnerung. Umso mehr
+                  habe ich Ihre offene Rückmeldung zur Finanzierung geschätzt.
                 </p>
                 <p>
-                  Ich möchte nicht, dass ein Projekt, das Ihrem Team im Alltag spürbar
-                  hilft, allein daran scheitert, dass der Betrag auf einmal fällig wäre.
-                  Deshalb gestalte ich die erste Phase für Sie bewusst flexibler, als ich
-                  es üblicherweise tue.
+                  Wenn ein erster Digitalisierungsschritt fachlich überzeugt und Ihrem Team
+                  jeden Tag Arbeit abnimmt, sollte die Zahlungsstruktur aus meiner Sicht
+                  nicht der einzige Grund sein, ihn aufzuschieben. Deshalb biete ich Ihnen
+                  für dieses erste Modul eine Zahlungsweise an, die sich an Ihrer
+                  aktuellen Planung orientiert.
                 </p>
                 <p className="text-ink">
-                  Am Umfang, an der Sorgfalt und an der Qualität der Umsetzung ändert das
-                  nichts.
+                  An Umfang, Sorgfalt und Qualität der Umsetzung ändert das nichts.
                 </p>
               </div>
             </Reveal>

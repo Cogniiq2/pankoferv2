@@ -5,26 +5,27 @@ import { PRICING, formatEuro } from "@/lib/pricing";
 
 const SETUP_INCLUDES = [
   "Prozessaufnahme mit Ihrem Team vor Ort",
-  "Aufbau der sechs Komponenten",
+  "Systemaufbau: E-Mail, Dokumente, Status und Übersicht",
   "Anbindung an Ihre Warenwirtschaft",
   "Testbetrieb mit echten Vorgängen",
-  "Einführung und Schulung",
+  "Einführung und Schulung Ihres Teams",
+  "Begleitung beim Start in den Live-Betrieb",
 ];
 
 const OPERATION_INCLUDES = [
   "Infrastruktur und Hosting",
   "Betrieb der Automatisierungen",
-  "Monitoring und Systemgesundheit",
+  "Monitoring und Systemzustand",
   "Wartung, Sicherheits- und Technik-Updates",
   "KI- und API-Betrieb im vereinbarten Umfang",
-  "Pflege der bestehenden Workflows",
+  "Pflege der eingerichteten Abläufe",
   "Support bei Fragen und Störungen",
 ];
 
 const PHASES = [
   { title: "Prozessaufnahme", text: "Reale Vorgänge, Regeln, Ausnahmen" },
   { title: "Aufbau & Anbindung", text: "Komponenten, Warenwirtschaft, Übersicht" },
-  { title: "Testbetrieb", text: "Mit Ihrem Team, mit echten Mails und Belegen" },
+  { title: "Testbetrieb", text: "Mit Ihrem Team, anhand echter E-Mails und Belege" },
   { title: "Live-Betrieb & Auswertung", text: "Messung, Feinschliff, Kennzahlen" },
 ] as const;
 
@@ -35,8 +36,8 @@ export function InvestmentSection() {
         <SectionHeading
           index="07"
           eyebrow="Investition"
-          title={<span id="investment-title">Klar kalkuliert, ohne versteckte Positionen.</span>}
-          lead="Zwei Beträge, beide netto. Der Umsetzungspreis deckt den gesamten Weg bis zum Live-Betrieb ab. Der monatliche Betrag hält das System danach verlässlich am Laufen."
+          title={<span id="investment-title">Was die Umsetzung umfasst und was sie kostet.</span>}
+          lead="Die Implementierung umfasst den gesamten Weg von der Prozessaufnahme bis zum Live-Betrieb eines Systems, das auf Ihre Abläufe zugeschnitten ist. Der monatliche Betrag sichert danach den verlässlichen Betrieb. Beide Beträge verstehen sich netto."
         />
 
         <div className="mt-16 grid gap-5 lg:grid-cols-2 lg:gap-8">
@@ -62,10 +63,10 @@ export function InvestmentSection() {
               <div className="flex items-center gap-1.5">
                 <p className="eyebrow">Laufender Betrieb</p>
                 <Tooltip label="Was der laufende Betrieb umfasst">
-                  Der monatliche Betrag ist kein reines Hosting. Er deckt den Betrieb des
-                  produktiven Systems ab: Infrastruktur, Überwachung, Wartung, Updates,
+                  Der monatliche Betrag ist mehr als Hosting. Er deckt den laufenden
+                  Betrieb des Systems ab: Infrastruktur, Überwachung, Wartung, Updates,
                   den KI- und API-Betrieb im vereinbarten Umfang sowie Support.
-                  Weiterentwicklungen darüber hinaus werden separat abgestimmt.
+                  Weiterentwicklungen darüber hinaus stimmen wir separat ab.
                 </Tooltip>
               </div>
               <p className="serif-display text-figure num mt-6 text-ink">

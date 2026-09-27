@@ -2,8 +2,8 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 
 const STEPS = [
   {
-    title: "Erster Schritt geht in Betrieb",
-    text: "Das Modul wird umgesetzt, mit Ihrem Team getestet und läuft im echten Tagesgeschäft.",
+    title: "Das Modul geht in Betrieb",
+    text: "Es wird umgesetzt, mit Ihrem Team getestet und im Tagesgeschäft eingesetzt.",
   },
   {
     title: "Gemeinsame Auswertung",
@@ -11,7 +11,7 @@ const STEPS = [
   },
   {
     title: "Ihre Entscheidung",
-    text: "Ob und wann weitere Module sinnvoll sind, entscheiden Sie. Ohne Verpflichtung, ohne Zeitdruck.",
+    text: "Ob und wann weitere Module folgen, entscheiden allein Sie – ohne Verpflichtung und ohne Zeitdruck.",
   },
 ] as const;
 
@@ -85,8 +85,8 @@ export function ProofThenExpand() {
                   ))}
                 </ul>
                 <p className="mt-6 rounded-xl border border-paper/10 bg-paper/[0.03] px-4 py-3 text-caption text-paper/65">
-                  Spätere Module sind optional. Es gibt keine Verpflichtung, weitere
-                  Phasen zu beauftragen.
+                  Weitere Module sind optional. Mit diesem Vorschlag gehen Sie keine
+                  Verpflichtung für spätere Phasen ein.
                 </p>
               </div>
             </Reveal>

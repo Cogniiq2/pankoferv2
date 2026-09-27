@@ -59,8 +59,8 @@ export function Hero() {
               {...item(0.32)}
             >
               Aus allem, was wir in München besprochen haben, habe ich die Abläufe
-              herausgelöst, die Ihrem Team am schnellsten messbar Arbeit abnehmen können.
-              Ohne dass dafür das gesamte ursprüngliche Projekt nötig ist.
+              ausgewählt, bei denen Ihr Team am schnellsten und messbar entlastet wird –
+              ohne dass dafür das ursprüngliche Gesamtprojekt nötig ist.
             </motion.p>
 
             <motion.div

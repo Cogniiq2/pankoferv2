@@ -9,7 +9,7 @@ const COMPONENTS = [
     icon: Mail,
     title: "E-Mail-Assistent",
     text: "Eingehende E-Mails werden automatisch analysiert, nach Thema eingeordnet und dem richtigen Vorgang zugewiesen. Relevante Angaben werden herausgelesen, ein Antwortvorschlag liegt bereit.",
-    note: "Ob eine Antwort versendet wird, entscheidet weiterhin Ihr Team. Keine sensible Antwort verlässt ungeprüft das Haus.",
+    note: "Ihr Team entscheidet, was hinausgeht. Automatisch beantwortet werden nur Standardfälle, die Sie vorab festgelegt haben.",
   },
   {
     icon: Document,
@@ -26,27 +26,27 @@ const COMPONENTS = [
   {
     icon: Reply,
     title: "Statusautomatisierung",
-    text: "Wiederkehrende Status- und Lieferanfragen werden erkannt, dem Auftrag zugeordnet und mit dem aktuellen Stand beantwortet: je nach Regel automatisch oder als fertiger Vorschlag.",
-    note: "Unklare Fälle landen immer bei einem Menschen.",
+    text: "Wiederkehrende Status- und Lieferanfragen werden erkannt, dem Auftrag zugeordnet und mit dem aktuellen Stand beantwortet: als fertiger Entwurf zur Freigabe oder, bei klar geregelten Standardfällen, automatisch.",
+    note: "Unklare oder sensible Fälle landen immer bei einem Menschen.",
   },
   {
     icon: Link,
     title: "Warenwirtschaft-Anbindung",
-    text: "Ihre bestehende Warenwirtschaft bleibt das führende System. Angebunden wird sie pragmatisch: über Schnittstelle, CSV-Brücke oder strukturierten Datenaustausch, je nachdem, was technisch sinnvoll ist.",
+    text: "Ihre bestehende Warenwirtschaft bleibt das führende System. Wir binden sie auf dem Weg an, der technisch am besten passt, und bauen auf dem auf, was sich bei Ihnen bewährt hat.",
     note: "Wir ersetzen nichts, was bereits gut funktioniert.",
   },
   {
     icon: Grid,
     title: "Zentrale Übersicht",
     text: "Ihr Team sieht auf einen Blick, was eingegangen ist, was verarbeitet wurde, was auf Prüfung wartet, was noch offen ist, was beantwortet wurde und wo eine Ausnahme aufgetreten ist.",
-    note: "Kontrolle ohne Nachfragen.",
+    note: "Den Stand jedes Vorgangs sehen, ohne nachfragen zu müssen.",
   },
 ] as const;
 
 const GUARDRAILS = [
   {
     title: "Freigabe durch Ihr Team, wo es darauf ankommt",
-    text: "Automatisiert wird nur, was nach klaren Regeln sicher ist. Alles andere wird vorbereitet, nicht versendet.",
+    text: "Automatisch versendet wird nur, was Sie vorab als Standardfall festgelegt haben. Alles andere wird vorbereitet und von Ihrem Team freigegeben.",
   },
   {
     title: "Bestehende Systeme bleiben führend",
@@ -71,7 +71,7 @@ export function ModuleArchitecture() {
               <span className="mt-3 block text-ink-3">{SITE.proposalSubtitle}</span>
             </span>
           }
-          lead="Ein System, das die eingehende Kommunikation und die dazugehörigen Dokumente versteht, strukturiert und so aufbereitet, dass Ihr Team damit direkt weiterarbeiten kann. Und nur dort eingreifen muss, wo es wirklich nötig ist."
+          lead="Ein System für den laufenden Betrieb, zugeschnitten auf Ihre Abläufe: Es liest eingehende E-Mails und Dokumente, ordnet sie dem richtigen Vorgang zu und bereitet alles so auf, dass direkt damit weitergearbeitet werden kann. Ihr Team greift nur dort ein, wo Erfahrung und Urteilsvermögen gefragt sind."
         />
 
         {/* Flow diagram */}
@@ -115,8 +115,8 @@ export function ModuleArchitecture() {
           <Reveal className="lg:col-span-4">
             <p className="eyebrow">Leitplanken</p>
             <p className="mt-4 text-pretty text-ink-2">
-              Drei Grundsätze, die für jede Komponente gelten. Sie sorgen dafür, dass das
-              System im Alltag verlässlich bleibt.
+              Drei Grundsätze gelten für jede Komponente. Sie sorgen dafür, dass das System
+              verlässlich arbeitet und Ihr Team die Kontrolle behält.
             </p>
           </Reveal>
           <RevealGroup as="ul" className="grid gap-6 sm:grid-cols-3 lg:col-span-8" stagger={0.1}>

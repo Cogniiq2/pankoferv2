@@ -6,12 +6,12 @@ const ROWS = [
   {
     figure: OPERATIONS.EMAILS_PER_DAY,
     label: "E-Mails täglich",
-    today: "Lesen, einordnen, weiterleiten oder beantworten. Alles von Hand.",
+    today: "Lesen, einordnen, weiterleiten, beantworten – alles von Hand.",
   },
   {
     figure: OPERATIONS.ORDERS_PER_DAY,
     label: "Bestellungen täglich",
-    today: "Die Angaben werden aus Mails und Belegen von Hand in die Warenwirtschaft übertragen.",
+    today: "Die Angaben werden aus E‑Mails und Belegen von Hand in die Warenwirtschaft übertragen.",
   },
   {
     figure: OPERATIONS.DOCUMENTS_PER_DAY,
@@ -34,10 +34,10 @@ export function OperationalSnapshot() {
           eyebrow="Was ich aus unserem Termin mitgenommen habe"
           title={
             <span id="snapshot-title">
-              Vier Stellen, an denen jeden Tag dieselbe Handarbeit entsteht.
+              Vier Stellen, an denen jeden Tag wiederkehrende Handarbeit entsteht.
             </span>
           }
-          lead="Ihre Zahlen aus dem Gespräch, gerundet. Keine davon ist dramatisch. Zusammen ergeben sie den Teil des Arbeitstags, der sich am ehesten abnehmen lässt."
+          lead="Die Zahlen stammen aus unserem Gespräch und sind gerundet. Für sich genommen ist jeder dieser Schritte überschaubar. Weil sie sich aber täglich wiederholen, binden sie in Summe kontinuierlich Zeit und Aufmerksamkeit."
         />
 
         <RevealGroup as="ol" className="mt-16 border-t border-line" stagger={0.1}>
@@ -61,12 +61,10 @@ export function OperationalSnapshot() {
 
         <Reveal className="mt-12 grid gap-6 lg:grid-cols-12">
           <p className="text-pretty text-ink-2 lg:col-span-7 lg:col-start-4">
-            Keiner dieser Schritte ist für sich schwierig. Aber sie wiederholen sich
-            jeden Tag, unterbrechen andere Arbeit und binden die Aufmerksamkeit von
-            Menschen, die eigentlich für anderes gebraucht werden.{" "}
-            <span className="text-ink">
-              Genau hier entsteht täglich wiederkehrender manueller Aufwand.
-            </span>
+            Hinzu kommt, dass diese Aufgaben selten am Stück anfallen. Sie unterbrechen
+            andere Arbeit, oft bei genau den Mitarbeitenden, deren Fachwissen an anderer
+            Stelle gebraucht wird.{" "}
+            <span className="text-ink">Hier setzt der erste Schritt an.</span>
           </p>
         </Reveal>
       </div>

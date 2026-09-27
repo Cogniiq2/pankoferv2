@@ -4,12 +4,12 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { VALUE_ESTIMATE } from "@/lib/pricing";
 
 const QUALITATIVE = [
-  "Weniger repetitive Arbeit",
+  "Weniger wiederkehrende Routinearbeit",
   "Weniger Unterbrechungen im Tagesgeschäft",
+  "Weniger Suchen in Postfächern, Ordnern und Systemen",
   "Schnellerer Zugriff auf Informationen",
-  "Weniger Abhängigkeit vom manuellen Suchen",
-  "Strukturiertere, gleichmäßigere Abläufe",
-  "Mehr Zeit für Aufgaben, die fachliches Wissen erfordern",
+  "Klarere, einheitliche Abläufe",
+  "Mehr Zeit für Aufgaben, die Fachwissen erfordern",
   "Technische Grundlage für spätere Module",
 ];
 
@@ -21,7 +21,7 @@ export function ValueSection() {
           index="05"
           eyebrow="Erwartete Wirkung"
           title={<span id="value-title">Was sich dadurch verändern soll.</span>}
-          lead="Zwei Zahlen aus der derzeitigen Kalkulation und eine Reihe von Effekten, die sich schlechter in Zahlen fassen lassen, im Alltag aber mindestens genauso zählen."
+          lead="Heute wird jeden Tag gelesen, gesucht, abgetippt, zugeordnet und beantwortet. Das System soll Ihrem Team davon so viel wie möglich abnehmen. Die Werte unten beziffern die Größenordnung; wie viel davon in der Praxis ankommt, messen wir gemeinsam."
         />
 
         <div className="mt-16 grid gap-10 lg:grid-cols-12 lg:gap-16">
@@ -42,7 +42,7 @@ export function ValueSection() {
             </Reveal>
             <Reveal delay={0.1}>
               <div className="card p-8 sm:p-10">
-                <p className="eyebrow">Derzeit kalkulierte operative Entlastung</p>
+                <p className="eyebrow">Potenzielle Entlastung</p>
                 <p className="serif-display text-figure mt-6 text-ink">
                   <span className="text-ink-4">≈</span>{" "}
                   <AnimatedNumber
@@ -50,14 +50,14 @@ export function ValueSection() {
                     format="euro"
                   />
                 </p>
-                <p className="mt-3 text-small text-ink-3">pro Jahr, brutto, vor finaler Prozessaufnahme</p>
+                <p className="mt-3 text-small text-ink-3">pro Jahr (brutto), auf Basis der bisher besprochenen Abläufe</p>
               </div>
             </Reveal>
           </div>
 
           <div className="lg:col-span-5">
             <Reveal>
-              <p className="eyebrow">Schwerer zu messen, aber täglich spürbar</p>
+              <p className="eyebrow">Was sich im Arbeitstag ändert</p>
             </Reveal>
             <RevealGroup as="ul" className="mt-6 divide-y divide-line border-y border-line" stagger={0.06}>
               {QUALITATIVE.map((item) => (
@@ -73,9 +73,10 @@ export function ValueSection() {
         <Reveal className="mt-12">
           <p className="max-w-3xl text-small text-pretty text-ink-3">
             <span className="font-medium text-ink-2">Einordnung: </span>
-            Beide Werte sind Potenzial auf Basis der bisher besprochenen Abläufe, keine
-            Zusage. Die finalen Werte werden zu Beginn des Projekts anhand Ihrer realen
-            Prozessdaten validiert und im laufenden Betrieb gemeinsam gemessen.
+            Beide Werte sind gerundete Schätzungen auf Basis der bisher besprochenen
+            Abläufe, keine Zusage. Zu Beginn des Projekts prüfen wir sie anhand Ihrer
+            realen Prozessdaten; die tatsächliche Wirkung messen wir nach dem Start
+            gemeinsam.
           </p>
         </Reveal>
       </div>

@@ -8,7 +8,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const TODAY = [
   "Statusanfrage kommt per E-Mail",
-  "Mitarbeiter liest die Mail",
+  "Jemand im Team liest die E-Mail",
   "sucht den zugehörigen Auftrag",
   "sucht die Lieferinformation",
   "formuliert eine Antwort",
@@ -19,7 +19,7 @@ const WITH_SYSTEM = [
   "Statusanfrage wird erkannt",
   "relevanter Auftrag wird zugeordnet",
   "aktueller Stand wird abgerufen",
-  "Antwort wird vorbereitet oder nach Regel automatisiert",
+  "Antwort wird vorbereitet oder, im Standardfall, automatisch versendet",
 ];
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -124,7 +124,7 @@ export function ProcessComparison() {
               Was sich an einer einzelnen Statusanfrage konkret ändert.
             </span>
           }
-          lead="Rund zehnmal am Tag läuft dieser Ablauf bei Ihnen durch. Heute komplett von Hand. Mit dem System greift Ihr Team nur noch dort ein, wo Erfahrung gefragt ist."
+          lead="Rund zehnmal am Tag läuft dieser Ablauf bei Ihnen durch, heute vollständig von Hand. Mit dem System wird er vorbereitet oder, bei klaren Standardfällen, direkt erledigt."
         />
 
         <div className="mt-16 grid gap-5 lg:grid-cols-2 lg:gap-8">
@@ -139,9 +139,9 @@ export function ProcessComparison() {
           <Reveal delay={0.1}>
             <StepColumn
               label="Mit dem System"
-              meta="1 Eingriff, nur bei Ausnahmen"
+              meta="Eingriff nur bei Ausnahmen"
               steps={WITH_SYSTEM}
-              final="Mitarbeiter greift nur bei Ausnahmen ein"
+              final="Ihr Team greift nur bei Ausnahmen ein"
               tone="accent"
             />
           </Reveal>
@@ -150,7 +150,8 @@ export function ProcessComparison() {
         <Reveal className="mt-10">
           <p className="text-small text-ink-3">
             Dieselbe Logik gilt für Bestellungen, Belege und Lieferpapiere: erkennen,
-            zuordnen, strukturieren, vorbereiten. Der Mensch entscheidet, wo es zählt.
+            zuordnen, strukturieren, vorbereiten. Wo es darauf ankommt, entscheidet Ihr
+            Team.
           </p>
         </Reveal>
       </div>

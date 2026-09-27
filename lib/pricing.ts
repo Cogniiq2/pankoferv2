@@ -32,10 +32,14 @@ export const OPERATIONS = {
   STATUS_REQUESTS_PER_DAY: "~10",
 } as const;
 
-/** Current estimate – potential, not a guarantee. */
+/**
+ * Current estimate – potential, not a guarantee. Rounded for display so the
+ * page does not suggest more precision than the initial discussions allow
+ * (internal calculation: 16.4 h/week, €33,870/year).
+ */
 export const VALUE_ESTIMATE = {
-  HOURS_SAVED_PER_WEEK: 16.4,
-  ANNUAL_SAVING_EUR: 33_870,
+  HOURS_SAVED_PER_WEEK: 16,
+  ANNUAL_SAVING_EUR: 34_000,
 } as const;
 
 export interface PlanInput {

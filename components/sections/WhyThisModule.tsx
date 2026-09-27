@@ -27,16 +27,16 @@ const CRITERIA = [
     text: "Die Entlastung verteilt sich im Team, statt an einer Person hängen zu bleiben.",
   },
   {
-    title: "Bringt schnell spürbare Entlastung",
-    text: "Der Unterschied ist in den ersten Wochen im Alltag zu merken, nicht erst nach Monaten.",
+    title: "Entlastet schnell",
+    text: "Der Unterschied zeigt sich in den ersten Wochen, nicht erst nach Monaten.",
   },
   {
     title: "Lässt sich messen",
-    text: "Verarbeitete Mails, Dokumente und Anfragen sind zählbar. So bleibt der Nutzen überprüfbar.",
+    text: "Verarbeitete E-Mails, Dokumente und Anfragen lassen sich zählen. So bleibt der Nutzen überprüfbar.",
   },
   {
-    title: "Trägt spätere Phasen",
-    text: "Strukturierte Daten und Anbindungen aus diesem Schritt sind die Grundlage für alles Weitere.",
+    title: "Schafft die Grundlage für später",
+    text: "Die strukturierten Daten und Anbindungen aus diesem Schritt können spätere Module direkt nutzen.",
   },
 ];
 
@@ -49,10 +49,10 @@ export function WhyThisModule() {
           eyebrow="Warum genau dieser erste Schritt?"
           title={
             <span id="why-title">
-              Nicht möglichst viel auf einmal. Sondern das, was Ihr Team zuerst merkt.
+              Begonnen wird dort, wo täglich die meiste Routinearbeit anfällt.
             </span>
           }
-          lead="Das ursprüngliche Gesamtprojekt umfasste viele Bereiche. Für den ersten Schritt habe ich bewusst nur die Prozesse ausgewählt, die fünf Kriterien gleichzeitig erfüllen."
+          lead="Das ursprüngliche Gesamtprojekt umfasste deutlich mehr, von der Wissensdatenbank bis zum Außendienst. Für den Anfang habe ich daraus nur die Abläufe ausgewählt, die fünf Kriterien zugleich erfüllen."
         />
 
         <div className="mt-16 grid gap-10 lg:grid-cols-12 lg:gap-16">

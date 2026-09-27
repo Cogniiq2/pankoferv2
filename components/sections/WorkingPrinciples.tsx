@@ -3,15 +3,15 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 const PRINCIPLES = [
   {
     title: "Persönlich statt anonym",
-    text: "Sie arbeiten direkt mit mir. Ich kenne Ihre Abläufe aus dem Gespräch vor Ort und bleibe auch nach der Einführung Ihr Ansprechpartner.",
+    text: "Sie haben einen festen Ansprechpartner, der Ihre Abläufe aus dem Gespräch vor Ort kennt – vom ersten Termin bis in den laufenden Betrieb.",
   },
   {
     title: "Alltagstauglich statt beeindruckend",
-    text: "Technik ist nur dann gut, wenn sie den Arbeitsalltag einfacher macht. Daran messe ich jede Entscheidung im Projekt.",
+    text: "Technik ist nur dann gut, wenn sie den Arbeitsalltag einfacher macht. Daran orientiert sich jede Entscheidung im Projekt.",
   },
   {
     title: "Ehrlich statt vollmundig",
-    text: "Was das System nicht sicher kann, landet bei einem Menschen. Das sage ich vorher, nicht hinterher.",
+    text: "Grenzen des Systems werden vorher benannt, nicht hinterher entdeckt. Was es nicht sicher beherrscht, landet bei einem Menschen.",
   },
 ] as const;
 

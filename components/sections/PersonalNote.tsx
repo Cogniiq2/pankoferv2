@@ -33,27 +33,26 @@ export function PersonalNote() {
                     Erinnerung geblieben.
                   </p>
                   <p>
-                    Die Offenheit, mit der Sie Ihre Abläufe beschrieben haben, und der
-                    professionelle, zugleich sehr angenehme Umgang in Ihrem Team haben
-                    bei mir einen bleibenden Eindruck hinterlassen.
+                    Das liegt vor allem an der Offenheit, mit der Sie Ihre Abläufe
+                    geschildert haben, und an dem ebenso professionellen wie angenehmen
+                    Umgang in Ihrem Team.
                   </p>
                   <p>
-                    Ebenso schätze ich, dass Sie mir offen mitgeteilt haben, wie es
-                    derzeit um die Finanzierung steht. Mit dieser Rückmeldung wollte
-                    ich nicht einfach noch einmal mit demselben Gesamtprojekt auf Sie
-                    zukommen.
+                    Ebenso habe ich Ihre ehrliche Rückmeldung zur Finanzierung des
+                    Gesamtprojekts geschätzt. Darauf wollte ich nicht antworten, indem
+                    ich Ihnen dasselbe Projekt noch einmal vorlege.
                   </p>
                   <p>
-                    Stattdessen habe ich mir noch einmal konkret angesehen, welche der
-                    von Ihnen geschilderten Prozesse Ihrem Team im Alltag am schnellsten
-                    und spürbarsten Arbeit abnehmen können. Und was davon sich als
-                    eigenständiger erster Schritt sinnvoll umsetzen lässt.
+                    Stattdessen habe ich mir genau angesehen, bei welchen
+                    der geschilderten Abläufe eine Automatisierung Ihrem Team am
+                    schnellsten Arbeit abnimmt – und welche davon sich als
+                    eigenständiger erster Schritt umsetzen lassen.
                   </p>
                   <p>
                     Daraus ist dieser Vorschlag entstanden. Er ist kein verkleinertes
-                    Gesamtprojekt und keine Notlösung, sondern ein erster Schritt, der
-                    für sich genommen sinnvoll ist. Und auf dem sich später aufbauen
-                    lässt, wenn Sie das möchten.
+                    Gesamtprojekt und keine Notlösung, sondern ein Schritt, der für sich
+                    genommen Sinn ergibt – und auf dem sich später aufbauen lässt, wenn
+                    Sie das möchten.
                   </p>
                 </div>
 
